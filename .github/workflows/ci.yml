@@ -27,4 +27,4 @@ jobs:
       - name: Create website
         run: mkdocs new .
       - name: Deploy website
-        run: mkdocs gh-deploy --force
+        run: mkdocs gh-deploy --force --verbose
