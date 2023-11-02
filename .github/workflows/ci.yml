@@ -23,7 +23,7 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - name: Install mkdocs-material
-        run: pip install mkdocs-material
+        run: pip install mkdocs-material pymdown-extensions
       - name: Create website
         run: mkdocs new .
       - name: Deploy website
