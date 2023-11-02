@@ -3,7 +3,7 @@
 ## Wie is Bennert
 Mijn naam is Bennert de Wijs en ik ben geboren en getogen in Veldhoven.
 
-Ik heb een Mavo-diploma, gevolgd door een MTS Electronica en een HTS Informatica.
+Ik heb een Mavo-diploma, gevolgd door een MTS Electronica- en een HTS Informatica diploma.
 
 Ik heb gewerkt als Field Service Engineer van 1996 tot 2000, als Software Engineer van 2000 tot 2007 en daarna als Software Test Engineer en Test Automation Engineer.
 

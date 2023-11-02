@@ -1,2 +1,3 @@
-# bennert.github.io
-Website of Bennert
+# Bennert
+
+[Website of Bennert](docs/index.md)
