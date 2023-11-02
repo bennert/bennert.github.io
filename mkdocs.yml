@@ -1,7 +1,8 @@
 site_name: Bennert
 
 theme:
-  name: material
+  # name: material
+  name: readthedocs
   features:
     - content.code.annotation
     - content.code.copy
