@@ -1,6 +1,6 @@
 # Bennert
 
-![Brand](images/PersonalBrandBennert-nl.jpg)
+![Brand](../images/PersonalBrandBennert-nl.jpg)
 
 [Wie is Bennert](intro.md)
 

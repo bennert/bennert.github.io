@@ -8,13 +8,13 @@ theme:
     - content.code.copy
     - content.tabs.link
     - navigation.indexes
-    - navigation.sections
+    # - navigation.sections
     - navigation.tabs
     - navigation.top
     - search.highlight
     - search.suggest
     - toc.integrate
-  language: en
+  language: nl
   palette:
     - scheme: default
       toggle:
@@ -38,7 +38,22 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
+plugins:
+  - search
+  - i18n:
+      languages:
+        nl: "Nederlands"
+        en: "English"
+      default_language: 'nl'
+
 extra:
+  alternate:
+    - name: Nederlands
+      link: nl/
+      lang: nl
+    - name: English
+      link: en/
+      lang: en
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/bennertdewijs
