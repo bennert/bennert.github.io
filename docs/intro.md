@@ -18,4 +18,4 @@ Een van mijn leukste werkopdrachten was het Philips hue-project, waarbij ik het 
 
 Ik heb een sterk abstractievermogen en kan concepten afleiden uit concrete situaties. Ik ben innovatief en denk voortdurend vanuit mijn creativiteit na over vernieuwingen. Ik ben goed in het bedenken van nieuwe, gevarieerde en creatieve ideeën. Ik heb een groot leervermogen en kan snel iets nieuws eigen maken en leren uit ervaring. Ik ben omgevingssensitief en sta open voor anderen en voor de omgeving.
 
-Wat werk betreft ben ik op zoek naar een nieuwe uitdaging waarbij ik mijn talenten kan inzetten en verder kan ontwikkelen.
+Wat werk betreft ben ik altijd op zoek naar nieuwe uitdagingen waarbij ik mijn talenten kan inzetten en verder kan ontwikkelen.
