@@ -1,5 +1,5 @@
 site_name: Bennert
-site_dir: public
+site_dir: _site
 
 theme:
   name: material
