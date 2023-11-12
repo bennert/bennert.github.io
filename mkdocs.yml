@@ -50,8 +50,8 @@ plugins:
       default_language: nl
 
 nav:
-- index.md
-- index.en.md
+- Thuis: index.md
+- Home: index.en.md
 - Intro: Intro
 - Talents: Talents
 
