@@ -37,4 +37,4 @@ Hierbij een overzicht van mijn talenten
 | 31.| Zelfstandig werkend |
 | 32.| Zorgzaam |
 
-[Home](index.md)
+[Home](/)

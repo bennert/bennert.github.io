@@ -1,6 +1,6 @@
 # Who is Bennert
 
-![Profiel foto](../images/Bennert_profiel.JPG)
+![Profiel foto](../assets/images/Bennert_profiel.JPG)
 
 My name is Bennert de Wijs and I was born and raised in Veldhoven.
 

@@ -1,4 +1,4 @@
-# Rijschema Achilles '95 HS1
+# Driving Schedule Achilles '95 HS1
 
 | Date | Day | Summary | Start | End | Location | Maps | Travel Distance | Travel Time | Time @Atalanta |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

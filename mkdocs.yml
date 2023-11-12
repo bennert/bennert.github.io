@@ -1,8 +1,10 @@
 site_name: Bennert
+docs_dir: docs
 site_dir: _site
 
 theme:
   name: material
+  custom_dir: overrides/
   features:
     - content.code.annotation
     - content.code.copy
@@ -14,7 +16,7 @@ theme:
     - search.highlight
     - search.suggest
     - toc.integrate
-  language: nl
+
   palette:
     - scheme: default
       toggle:
@@ -43,17 +45,23 @@ plugins:
   - open-in-new-tab
   - i18n:
       languages:
-        nl: "Nederlands"
-        en: "English"
-      default_language: 'nl'
+        nl: '<img style="height: 10px; border: 0px;" alt="nl" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1f3-1f1f1.svg" title="nederlands" /> Nederlands'
+        en: '<img style="height: 10px; border: 0px;" alt="en" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title="english" /> English'
+      default_language: nl
+
+nav:
+- index.md
+- index.en.md
+- Intro: Intro
+- Talents: Talents
 
 extra:
   alternate:
     - name: Nederlands
-      link: nl/
+      link: /nl/
       lang: nl
     - name: English
-      link: en/
+      link: /en/
       lang: en
   social:
     - icon: fontawesome/brands/twitter

@@ -1,6 +1,6 @@
 # Wie is Bennert
 
-![Profiel foto](../images/Bennert_profiel.JPG)
+![Profiel foto](../assets/images/Bennert_profiel.JPG)
 
 Mijn naam is Bennert de Wijs en ik ben geboren en getogen in Veldhoven.
 
