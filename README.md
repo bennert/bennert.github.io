@@ -1,3 +1,3 @@
 # Bennert
 
-[Website of Bennert](docs/index.md)
+[Website of Bennert](http://www.bennert.nl)
