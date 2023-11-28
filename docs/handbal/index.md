@@ -2,9 +2,6 @@
 
 | Date | Day | Summary | Start | End | Location | Maps | Travel Distance | Travel Time | Time @Atalanta |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 2023-11-12 | Sunday | Avanti HS1-Achilles '95 HS1 | 14:25 | 16:25 | Dillenburcht Tinie de Munnikstraat 5 5151VW DRUNEN | [google maps](https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJPywSSCKTxkcRiSGbOz4lZFI) | 46.5 km | 40 mins | 12:30
-| 2023-11-18 | Saturday | Achilles '95 HS1-HC Groot Venlo HS2 | 20:10 | 22:10 | Atalanta De Dom 9 5508GE VELDHOVEN | [google maps](https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJibSx_U3axkcRv9bknS-qalI) | 0 | 0 | 19:10
-| 2023-11-25 | Saturday | Achilles '95 HS1-Handbalshop.nl Witte Ster/Tachos HS2 | 20:10 | 22:10 | Atalanta De Dom 9 5508GE VELDHOVEN | [google maps](https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJibSx_U3axkcRv9bknS-qalI) | 0 | 0 | 19:10
 | 2023-12-09 | Saturday | Achilles '95 HS1-The Flyers HS1 | 20:10 | 22:10 | Atalanta De Dom 9 5508GE VELDHOVEN | [google maps](https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJibSx_U3axkcRv9bknS-qalI) | 0 | 0 | 19:10
 | 2023-12-16 | Saturday | E.S.Z.V. Oktopus HS1-Achilles '95 HS1 | 20:00 | 22:00 | T.U. Eindhoven Onze Lieve Vrouwestraat 1 5612AW EINDHOVEN | [google maps](https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJy39qCyDZxkcRVk-pwuOxFis) | 9.6 km | 19 mins | 18:30
 | 2024-01-20 | Saturday | Achilles '95 HS1-Internos HS1 | 20:10 | 22:10 | Atalanta De Dom 9 5508GE VELDHOVEN | [google maps](https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJibSx_U3axkcRv9bknS-qalI) | 0 | 0 | 19:10
