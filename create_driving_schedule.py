@@ -40,7 +40,7 @@ def get_events_from_calendar():
         end = event.get('dtend').dt.strftime('%H:%M')
         location = event.get('location')
         url_map = get_google_maps_url(location)
-        maps = f'[google maps]("{url_map}")'
+        maps = f'[google maps]({url_map})'
         date = event.get('dtstart').dt.strftime('%Y-%m-%d')
         weekday = event.get('dtstart').dt.strftime('%A')
         if base_location in location:
