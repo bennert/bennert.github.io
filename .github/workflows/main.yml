@@ -31,6 +31,11 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
+      - name: Create Driving Schedule
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python3 create_driving_schedule.py
       - name: Set cache_id
         run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v3
