@@ -71,6 +71,11 @@ def get_events_header(language):
 
 assert os.getenv('MAPS_API_KEY'), 'MAPS_API_KEY not set'
 assert os.getenv('SPORTLINK_TOKEN_LIST'), 'SPORTLINK_TOKEN_LIST not set'
+FILE_PATH_NL = 'docs/Handbal/index.md'
+FILE_PATH_EN = 'docs/Handbal/index.en.md'
+# Ensure the directories exist
+os.makedirs(os.path.dirname(FILE_PATH_NL), exist_ok=True)
+os.makedirs(os.path.dirname(FILE_PATH_EN), exist_ok=True)
 
 # Sportlink
 sportlink_token_list = os.getenv('SPORTLINK_TOKEN_LIST').split(',')
@@ -82,8 +87,8 @@ events_header_list = {
         "| Reis minuten | Tijd @"
 }
 
-with open('docs/Handbal/index.md', 'w', encoding='utf-8') as file_nl, \
-     open('docs/Handbal/index.en.md', 'w', encoding='utf-8') as file_en:
+with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
+     open(FILE_PATH_EN, 'w', encoding='utf-8') as file_en:
     file_nl.write('# Wedstrijden Achilles \'95\n')
     file_en.write('# Competition Achilles \'95\n')
     for sportlink_token_item in sportlink_token_list:
