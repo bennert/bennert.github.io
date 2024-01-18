@@ -4,7 +4,6 @@ site_dir: _site
 
 theme:
   name: material
-  custom_dir: overrides/
   features:
     - content.code.annotation
     - content.code.copy
