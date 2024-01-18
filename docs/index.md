@@ -2,6 +2,6 @@
 
 ![Brand](assets/images/PersonalBrandBennert-nl.jpg)
 
-[Wie is Bennert](intro)
+[Wie is Bennert](Intro/index.md)
 
-[Talenten](talents)
+[Talenten](Talents/index.md)
