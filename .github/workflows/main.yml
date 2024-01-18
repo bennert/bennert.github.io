@@ -32,6 +32,9 @@ jobs:
         with:
           python-version: 3.x
       - name: Create Driving Schedule
+        env:
+          SPORTLINK_TOKEN_LIST: ${{ secrets.SPORTLINK_TOKEN_LIST }}
+          MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt

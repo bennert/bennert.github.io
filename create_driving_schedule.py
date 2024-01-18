@@ -69,6 +69,9 @@ def get_events_header(language):
     """ Get events header """
     return events_header_list[language] + f"{base_location} |\n"
 
+assert os.getenv('MAPS_API_KEY'), 'MAPS_API_KEY not set'
+assert os.getenv('SPORTLINK_TOKEN_LIST'), 'SPORTLINK_TOKEN_LIST not set'
+
 # Sportlink
 sportlink_token_list = os.getenv('SPORTLINK_TOKEN_LIST').split(',')
 
