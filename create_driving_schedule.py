@@ -60,14 +60,14 @@ def get_events_from_calendar():
             duration_str = f"{duration:.2f}"
 
         singleevent = [
-            date, weekday, summary, start, end, location_link,
-            distance_str, duration_str, collection_time]
+            date, weekday, summary, collection_time, start, end, location_link,
+            distance_str, duration_str]
         events.append(singleevent)
     return events
 
 def get_events_header(language):
     """ Get events header """
-    return events_header_list[language] + f"{base_location} |\n"
+    return events_header_list[language].replace("<BASE>", base_location)
 
 assert os.getenv('MAPS_API_KEY'), 'MAPS_API_KEY not set'
 assert os.getenv('SPORTLINK_TOKEN_LIST'), 'SPORTLINK_TOKEN_LIST not set'
@@ -81,10 +81,10 @@ os.makedirs(os.path.dirname(FILE_PATH_EN), exist_ok=True)
 sportlink_token_list = os.getenv('SPORTLINK_TOKEN_LIST').split(',')
 
 events_header_list = {
-    'en': "| Date | Day | Summary | Start | End | Location | Travel kms " +  \
-        "| Travel Minutes | Time @",
-    'nl': "| Datum | Dag | Samenvatting | Start | Einde | Locatie | Reis km " + \
-        "| Reis minuten | Tijd @"
+    'en': "| Date | Day | Summary | Time @<BASE> | Start | End | Location | Travel kms " +  \
+        "| Travel Minutes |\n",
+    'nl': "| Datum | Dag | Samenvatting | Tijd @<BASE> | Start | Einde | Locatie | Reis km " + \
+        "| Reis minuten |\n"
 }
 
 with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
