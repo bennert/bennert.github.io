@@ -47,10 +47,11 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - name: Install mkdocs-material
-        run: pip install mkdocs-material pymdown-extensions mkdocs-i18n mkdocs-open-in-new-tab
-      - name: Build website
-        run: mkdocs build
+      - name: Build mkdocs website
+        run:  |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.mkdocs.txt
+          mkdocs build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
