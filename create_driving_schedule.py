@@ -87,6 +87,16 @@ events_header_list = {
         "| Reis minuten |\n"
 }
 
+weekday_translation = {
+    'Monday': 'Maandag',
+    'Tuesday': 'Dinsdag',
+    'Wednesday': 'Woensdag',
+    'Thursday': 'Donderdag',
+    'Friday': 'Vrijdag',
+    'Saturday': 'Zaterdag',
+    'Sunday': 'Zondag'
+}
+
 with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
      open(FILE_PATH_EN, 'w', encoding='utf-8') as file_en:
     file_nl.write('# Wedstrijden Achilles \'95\n')
@@ -103,14 +113,20 @@ with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
         # Sort events on date
         calendar_events.sort(key=lambda x: x[0])
 
-        file_nl.write(f'\n## Rijschema {team_id}\n\n')
-        file_nl.write(get_events_header('nl'))
-        file_nl.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
-        for calendar_event in calendar_events:
-            file_nl.write('| ' + ' | '.join(calendar_event) + ' |\n')
-
         file_en.write(f'\n## Driving schedule {team_id}\n\n')
+        file_en.write(f'Base location: {base_location}\n\n')
+        file_en.write(f'Warming Up Time: {timebefore}\n\n')
         file_en.write(get_events_header('en'))
         file_en.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
         for calendar_event in calendar_events:
             file_en.write('| ' + ' | '.join(calendar_event) + ' |\n')
+
+        file_nl.write(f'\n## Rijschema {team_id}\n\n')
+        file_nl.write(f'Basis locatie: {base_location}\n\n')
+        file_nl.write(f'Warming Up Tijd: {timebefore}\n\n')
+        file_nl.write(get_events_header('nl'))
+        file_nl.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
+        for calendar_event in calendar_events:
+            calendar_event[1] = weekday_translation[calendar_event[1]]
+            file_nl.write('| ' + ' | '.join(calendar_event) + ' |\n')
+
