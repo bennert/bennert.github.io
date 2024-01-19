@@ -1,4 +1,30 @@
-# Talenten
+# Menselijke Behoeften en Talenten
+
+## Menselijke Behoeften
+
+De zes menselijke behoeften is erop gericht om de emotionele en psychologische behoeften van een persoon te begrijpen.
+
+Mijn Menselijke Behoeften volgens Tony Robbins zijn:
+* Groei
+* Bijdrage
+* Veiligheid
+
+```mermaid
+pie
+    title Menselijke Behoeften Bennert
+    "Veiligheid": 2
+    "Variatie": 0
+    "Verbinding": 0
+    "Erkenning": 0
+    "Groei": 5
+    "Bijdrage": 3
+```
+
+Wil je weten wat jouw Menselijke Behoeften zijn?
+
+Vul dan de [Questionnaire 6 Human Needs](https://forms.office.com/Pages/ResponsePage.aspx?id=a8ulgCGuqE69PyXgBc78W7s_cNsMqNxCkhi68glGcH5UNUNNWVgzR0wyRVRPT1pWQkZRMkxJVlU1Qi4u) in
+
+## Talenten
 
 Hierbij een overzicht van mijn talenten
 

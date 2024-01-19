@@ -4,4 +4,4 @@
 
 [Wie is Bennert](Intro/index.md)
 
-[Talenten](Talents/index.md)
+[Menselijke Behoeften en Talenten](Talents/index.md)

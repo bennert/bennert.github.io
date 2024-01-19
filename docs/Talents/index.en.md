@@ -1,4 +1,26 @@
-# Talents
+# Human Needs and Talents
+
+## Human Needs
+
+The Six Human Needs aims to understand a person's emotional and psychological needs.
+
+My Human Needs according to Tony Robbins are:
+* Grow
+* Contribution
+* Safety
+
+```mermaid
+pie
+    title Human Needs Bennert
+    "Safety": 2
+    "Variation": 0
+    "Connection": 0
+    "Recognition": 0
+    "Growth": 5
+    "Contribution": 3
+```
+
+## Talents
 
 Here is an overview of my talents
 
