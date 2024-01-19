@@ -57,13 +57,13 @@ def get_events_from_calendar():
                 - timedelta(minutes=duration) \
                 - timedelta(minutes=5)).strftime('%H:%M')
             collection_time = collection_time[:-1] + '0'
-            distance_str = f"{distance:.2f}"
-            duration_str = f"{duration:.2f}"
             costs = f"€ {distance * TRAVEL_COST_PER_KM:.2f}"
+            distance_str = f"{distance:.0f}"
+            duration_str = f"{duration:.0f}"
 
         singleevent = [
             date, weekday, summary, collection_time, start, end, location_link,
-            distance_str, duration_str, costs]
+            costs, distance_str, duration_str]
         events.append(singleevent)
     return events
 
@@ -83,10 +83,10 @@ os.makedirs(os.path.dirname(FILE_PATH_EN), exist_ok=True)
 sportlink_token_list = os.getenv('SPORTLINK_TOKEN_LIST').split(',')
 
 events_header_list = {
-    'en': "| Date | Day | Summary | Time @<BASE> | Start | End | Location | Travel kms " +  \
-        "| Travel Minutes | Travel Costs |\n",
-    'nl': "| Datum | Dag | Samenvatting | Tijd @<BASE> | Start | Einde | Locatie | Reis km " + \
-        "| Reis minuten | Reis kosten |\n"
+    'en': "| Date | Day | Summary | Time @<BASE> | Start | End | Location | Travel Costs " +  \
+        "| Travel kms | Travel Minutes |\n",
+    'nl': "| Datum | Dag | Samenvatting | Tijd @<BASE> | Start | Einde | Locatie | Reis kosten " + \
+        "| Reis km | Reis minuten |\n"
 }
 
 weekday_translation = {
