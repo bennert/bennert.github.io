@@ -44,9 +44,10 @@ def get_events_from_calendar():
         date = event.get('dtstart').dt.strftime('%Y-%m-%d')
         weekday = event.get('dtstart').dt.strftime('%A')
         if base_location in location:
+            collection_time = (event.get('dtstart').dt - timebefore).strftime('%H:%M')
             distance_str = '0'
             duration_str = '0'
-            collection_time = (event.get('dtstart').dt - timebefore).strftime('%H:%M')
+            costs = '€ 0'
         else:
             distance, duration = get_google_maps_distance_and_duration(location)
 
@@ -58,10 +59,11 @@ def get_events_from_calendar():
             collection_time = collection_time[:-1] + '0'
             distance_str = f"{distance:.2f}"
             duration_str = f"{duration:.2f}"
+            costs = f"€ {distance * TRAVEL_COST_PER_KM:.2f}"
 
         singleevent = [
             date, weekday, summary, collection_time, start, end, location_link,
-            distance_str, duration_str]
+            distance_str, duration_str, costs]
         events.append(singleevent)
     return events
 
@@ -82,9 +84,9 @@ sportlink_token_list = os.getenv('SPORTLINK_TOKEN_LIST').split(',')
 
 events_header_list = {
     'en': "| Date | Day | Summary | Time @<BASE> | Start | End | Location | Travel kms " +  \
-        "| Travel Minutes |\n",
+        "| Travel Minutes | Travel Costs |\n",
     'nl': "| Datum | Dag | Samenvatting | Tijd @<BASE> | Start | Einde | Locatie | Reis km " + \
-        "| Reis minuten |\n"
+        "| Reis minuten | Reis kosten |\n"
 }
 
 weekday_translation = {
@@ -108,6 +110,8 @@ with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
         print(f'Processing {team_id} @ base: {base_location}')
         # Presence time before game
         timebefore = timedelta(minutes=60)
+        # travel costs per km
+        TRAVEL_COST_PER_KM = 0.23
         calendar = get_sportlink_calendar()
         calendar_events = get_events_from_calendar()
         # Sort events on date
@@ -116,16 +120,18 @@ with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
         file_en.write(f'\n## Driving schedule {team_id}\n\n')
         file_en.write(f'Base location: {base_location}\n\n')
         file_en.write(f'Warming Up Time: {timebefore}\n\n')
+        file_en.write(f'Cost per km: €{TRAVEL_COST_PER_KM}\n\n')
         file_en.write(get_events_header('en'))
-        file_en.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
+        file_en.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
         for calendar_event in calendar_events:
             file_en.write('| ' + ' | '.join(calendar_event) + ' |\n')
 
         file_nl.write(f'\n## Rijschema {team_id}\n\n')
         file_nl.write(f'Basis locatie: {base_location}\n\n')
         file_nl.write(f'Warming Up Tijd: {timebefore}\n\n')
+        file_nl.write(f'Kosten per km: €{TRAVEL_COST_PER_KM}\n\n')
         file_nl.write(get_events_header('nl'))
-        file_nl.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
+        file_nl.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
         for calendar_event in calendar_events:
             calendar_event[1] = weekday_translation[calendar_event[1]]
             file_nl.write('| ' + ' | '.join(calendar_event) + ' |\n')
