@@ -40,7 +40,7 @@ def get_events_from_calendar():
         end = event.get('dtend').dt.strftime('%H:%M')
         location = event.get('location')
         url_map = get_google_maps_url(location)
-        maps = f'[google maps]({url_map})'
+        location_link = f'[{location}]({url_map})'
         date = event.get('dtstart').dt.strftime('%Y-%m-%d')
         weekday = event.get('dtstart').dt.strftime('%A')
         if base_location in location:
@@ -60,7 +60,7 @@ def get_events_from_calendar():
             duration_str = f"{duration:.2f}"
 
         singleevent = [
-            date, weekday, summary, start, end, location, maps,
+            date, weekday, summary, start, end, location_link,
             distance_str, duration_str, collection_time]
         events.append(singleevent)
     return events
@@ -81,9 +81,9 @@ os.makedirs(os.path.dirname(FILE_PATH_EN), exist_ok=True)
 sportlink_token_list = os.getenv('SPORTLINK_TOKEN_LIST').split(',')
 
 events_header_list = {
-    'en': "| Date | Day | Summary | Start | End | Location | Maps | Travel kms " +  \
+    'en': "| Date | Day | Summary | Start | End | Location | Travel kms " +  \
         "| Travel Minutes | Time @",
-    'nl': "| Datum | Dag | Samenvatting | Start | Einde | Locatie | Maps | Reis km " + \
+    'nl': "| Datum | Dag | Samenvatting | Start | Einde | Locatie | Reis km " + \
         "| Reis minuten | Tijd @"
 }
 
@@ -105,12 +105,12 @@ with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
 
         file_nl.write(f'\n## Rijschema {team_id}\n\n')
         file_nl.write(get_events_header('nl'))
-        file_nl.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
+        file_nl.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
         for calendar_event in calendar_events[1:]:
             file_nl.write('| ' + ' | '.join(calendar_event) + ' |\n')
 
         file_en.write(f'\n## Driving schedule {team_id}\n\n')
         file_en.write(get_events_header('en'))
-        file_en.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
+        file_en.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
         for calendar_event in calendar_events[1:]:
             file_en.write('| ' + ' | '.join(calendar_event) + ' |\n')
