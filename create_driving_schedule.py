@@ -106,11 +106,11 @@ with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
         file_nl.write(f'\n## Rijschema {team_id}\n\n')
         file_nl.write(get_events_header('nl'))
         file_nl.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
-        for calendar_event in calendar_events[1:]:
+        for calendar_event in calendar_events:
             file_nl.write('| ' + ' | '.join(calendar_event) + ' |\n')
 
         file_en.write(f'\n## Driving schedule {team_id}\n\n')
         file_en.write(get_events_header('en'))
         file_en.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
-        for calendar_event in calendar_events[1:]:
+        for calendar_event in calendar_events:
             file_en.write('| ' + ' | '.join(calendar_event) + ' |\n')
