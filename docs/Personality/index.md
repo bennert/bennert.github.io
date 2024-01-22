@@ -10,15 +10,15 @@ Mijn Menselijke Behoeften volgens Tony Robbins zijn:
 
 * Groei
 * Bijdrage
-* Veiligheid
+* Zekerheid
 
 ```mermaid
 pie
     title Menselijke Behoeften Bennert
-    "Veiligheid": 2
+    "Zekerheid": 2
     "Variatie": 0
-    "Verbinding": 0
-    "Erkenning": 0
+    "Erkenning/Betekenis": 0
+    "Verbinding/Liefde": 0
     "Groei": 5
     "Bijdrage": 3
 ```

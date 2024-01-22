@@ -10,15 +10,15 @@ My Human Needs according to Tony Robbins are:
 
 * Grow
 * Contribution
-* Safety
+* Certainty
 
 ```mermaid
 pie
     title Human Needs Bennert
-    "Safety": 2
-    "Variation": 0
-    "Connection": 0
-    "Recognition": 0
+    "Certainty": 2
+    "Variety": 0
+    "Significance": 0
+    "Connection/Love": 0
     "Growth": 5
     "Contribution": 3
 ```
