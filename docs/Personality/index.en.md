@@ -1,10 +1,13 @@
-# Human Needs and Talents
+# Personality
+
+On this page I describe my personality with what my [human needs](#human-needs) and what my [talents](#talents) are.
 
 ## Human Needs
 
 The Six Human Needs aims to understand a person's emotional and psychological needs.
 
 My Human Needs according to Tony Robbins are:
+
 * Grow
 * Contribution
 * Safety

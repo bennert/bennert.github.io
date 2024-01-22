@@ -1,4 +1,6 @@
-# Menselijke Behoeften en Talenten
+# Persoonlijkheid
+
+Op deze pagina beschrijf ik mijn persoonlijkheid met wat mijn [menselijke behoeften](#menselijke-behoeften) en wat mijn [talenten](#talenten) zijn.
 
 ## Menselijke Behoeften
 
