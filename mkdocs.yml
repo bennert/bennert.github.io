@@ -37,7 +37,12 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
 
 plugins:
   - search
@@ -48,6 +53,9 @@ plugins:
         nl: '<img style="height: 10px; border: 0px;" alt="nl" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1f3-1f1f1.svg" title="nederlands" /> Nederlands'
         en: '<img style="height: 10px; border: 0px;" alt="en" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f1ec-1f1e7.svg" title="english" /> English'
       default_language: nl
+
+extra_javascript:
+    - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 nav:
 - Thuis: index.md

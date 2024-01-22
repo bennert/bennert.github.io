@@ -5,6 +5,7 @@
 De zes menselijke behoeften is erop gericht om de emotionele en psychologische behoeften van een persoon te begrijpen.
 
 Mijn Menselijke Behoeften volgens Tony Robbins zijn:
+
 * Groei
 * Bijdrage
 * Veiligheid
