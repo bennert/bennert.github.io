@@ -4,4 +4,6 @@
 
 [Wie is Bennert](Intro/index.md)
 
-[Menselijke Behoeften en Talenten](Talents/index.md)
+[Persoonlijkheid](Personality/index.md)
+
+[Persoonlijke Groei](PersonalGrowth/index.md)
