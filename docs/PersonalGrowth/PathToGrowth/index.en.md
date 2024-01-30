@@ -14,8 +14,8 @@
 
 > The Truth Will Set You Free
 
-* Get CLEAR and HONEST about where you really are compared to where you really want to be
-* CLOSE THE GAP. Get clear on what's gotten in the way in the past. Is it fear, Belief / set of beliefs, emotion, habit, missing a skill / set of skills? (80% psychology / 20% mechanics)
+* Get CLEAR and HONEST about where you really are compared to where you really want to be (be specific)
+* CLOSE THE GAP. Get clear on what's gotten in the way in the past. Is it fear, Belief / set of beliefs, emotion, habit, missing a skill / set of skills? (80% psychological / 20% mechanical)
 
 ## Step 3: Create a Massive Action Plan (M.A.P.)
 
