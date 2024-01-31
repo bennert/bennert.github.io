@@ -6,6 +6,14 @@ Understanding these six human needs can provide insights into human behavior and
 
 These needs are:
 
+* [Cetainty](#1-certainty)
+* [Variety](#2-variety)
+* [Significance](#3-significance)
+* [Connection](#4-connection)
+* [Growth](#5-growth)
+* [Contribution](#6-contribution)
+
+
 ## 1. Certainty
 
 > The need for stability, security, and predictability in life. People seek comfort and avoid uncertainty to feel safe.

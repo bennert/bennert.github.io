@@ -4,7 +4,7 @@ On this page I describe my personality with what my [human needs](#human-needs) 
 
 ## Human Needs
 
-The Six Human Needs aims to understand a person's emotional and psychological needs.
+[The Six Human Needs](../PersonalGrowth/Discover6HumanNeeds/index.en.md) aims to understand a person's emotional and psychological needs.
 
 My Human Needs according to Tony Robbins are:
 

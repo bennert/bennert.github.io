@@ -4,7 +4,7 @@ Op deze pagina beschrijf ik mijn persoonlijkheid met wat mijn [menselijke behoef
 
 ## Menselijke Behoeften
 
-De zes menselijke behoeften is erop gericht om de emotionele en psychologische behoeften van een persoon te begrijpen.
+[De zes menselijke behoeften](../PersonalGrowth/Discover6HumanNeeds/index.md) is erop gericht om de emotionele en psychologische behoeften van een persoon te begrijpen.
 
 Mijn Menselijke Behoeften volgens Tony Robbins zijn:
 

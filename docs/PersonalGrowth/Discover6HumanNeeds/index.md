@@ -6,6 +6,13 @@ Het begrijpen van deze zes menselijke behoeften kan inzicht geven in menselijk g
 
 Deze behoeften zijn:
 
+* [Zekerheid](#1-zekerheid)
+* [Variatie](#2-variatie)
+* [Betekenis](#3-betekenis)
+* [Verbinding](#4-verbinding)
+* [Groei](#5-groei)
+* [Bijdrage](#6-bijdrage)
+
 ## 1. Zekerheid
 
 > De behoefte aan stabiliteit, veiligheid en voorspelbaarheid in het leven. Mensen zoeken troost en vermijden onzekerheid om zich veilig te voelen.

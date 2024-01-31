@@ -60,9 +60,23 @@ extra_javascript:
 nav:
 - Thuis: index.md
 - Home: index.en.md
-- Intro: Intro
-- Personality: Personality
-- PersonalGrowth: PersonalGrowth
+- Introductie: Intro/index.md
+- Intro: Intro/index.en.md
+- Persoonlijkheid: Personality/index.md
+- Personality: Personality/index.en.md
+- Groei/Growth:
+  - Overzicht: PersonalGrowth/index.md
+  - Overview: PersonalGrowth/index.en.md
+  - Ontdek 6 menselijke behoeften: PersonalGrowth/Discover6HumanNeeds/index.md
+  - Discover 6 human needs: PersonalGrowth/Discover6HumanNeeds/index.en.md
+  - Pad naar Groei: PersonalGrowth/PathToGrowth/index.md
+  - Path to Growth: PersonalGrowth/PathToGrowth/index.en.md
+  - Pyramide van Meesterschap: PersonalGrowth/PyramidOfMastery/index.md
+  - Pyramid of Mastery: PersonalGrowth/PyramidOfMastery/index.en.md
+  - Versterk je conditie: PersonalGrowth/EmpoweringState/index.md
+  - Empowering State: PersonalGrowth/EmpoweringState/index.en.md
+  - Groeien: PersonalGrowth/Thrive/index.md
+  - Thrive: PersonalGrowth/Thrive/index.en.md
 
 extra:
   alternate:

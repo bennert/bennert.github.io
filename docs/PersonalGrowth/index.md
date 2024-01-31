@@ -1,9 +1,11 @@
-[Ontdek 6 menselijke behoeften](./Discover6HumanNeeds/index.md)
+# Persoonlijke Groei
 
-[Pad naar Groei](./PathToGrowth/index.md)
+## [Ontdek 6 menselijke behoeften](./Discover6HumanNeeds/index.md)
 
-[Pyramide van Meesterschap](./PyramidOfMastery/index.md)
+## [Pad naar Groei](./PathToGrowth/index.md)
 
-[Versterk je conditie](./EmpoweringState/index.md)
+## [Pyramide van Meesterschap](./PyramidOfMastery/index.md)
 
-[Bloeien](./Thrive/index.en.md)
+## [Versterk je conditie](./EmpoweringState/index.md)
+
+## [Groeien](./Thrive/index.en.md)
