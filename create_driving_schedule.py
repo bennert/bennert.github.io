@@ -1,4 +1,4 @@
-""" Maak rijschema voor Achilles '95 """
+""" Maak rijschema voor team op basis van sportlink kalender en google maps afstand en tijd """
 from datetime import timedelta
 import os
 import requests
@@ -54,10 +54,9 @@ def get_events_from_calendar():
             # calculate colletion time: start - timebefore - time to travel - 5 min
             collection_time = \
                 (event.get('dtstart').dt - timebefore \
-                - timedelta(minutes=duration) \
-                - timedelta(minutes=5)).strftime('%H:%M')
+                - timedelta(minutes=duration)).strftime('%H:%M')
             collection_time = collection_time[:-1] + '0'
-            costs = f"€ {distance * TRAVEL_COST_PER_KM:.2f}"
+            costs = f"€ {distance * travel_cost_per_km:.2f}"
             distance_str = f"{distance:.0f}"
             duration_str = f"{duration:.0f}"
 
@@ -101,38 +100,35 @@ weekday_translation = {
 
 with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
      open(FILE_PATH_EN, 'w', encoding='utf-8') as file_en:
-    file_nl.write('# Wedstrijden Achilles \'95\n')
-    file_en.write('# Competition Achilles \'95\n')
     for sportlink_token_item in sportlink_token_list:
         team_id = sportlink_token_item.split(':')[0]
         base_location = sportlink_token_item.split(':')[1]
         sportlink_token = sportlink_token_item.split(':')[2]
-        print(f'Processing {team_id} @ base: {base_location}')
+        warming_up_time = float(sportlink_token_item.split(':')[3])
+        travel_cost_per_km = float(sportlink_token_item.split(':')[4])
+        print(f'\nProcessing {team_id} @ base: {base_location}')
         # Presence time before game
-        timebefore = timedelta(minutes=60)
-        # travel costs per km
-        TRAVEL_COST_PER_KM = 0.23
+        timebefore = timedelta(minutes=warming_up_time)
         calendar = get_sportlink_calendar()
         calendar_events = get_events_from_calendar()
         # Sort events on date
         calendar_events.sort(key=lambda x: x[0])
 
-        file_en.write(f'\n## Driving schedule {team_id}\n\n')
+        file_en.write(f'\n# Driving schedule {team_id}\n\n')
         file_en.write(f'Base location: {base_location}\n\n')
         file_en.write(f'Warming Up Time: {timebefore}\n\n')
-        file_en.write(f'Cost per km: €{TRAVEL_COST_PER_KM}\n\n')
+        file_en.write(f'Cost per km: €{travel_cost_per_km}\n\n')
         file_en.write(get_events_header('en'))
         file_en.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
         for calendar_event in calendar_events:
             file_en.write('| ' + ' | '.join(calendar_event) + ' |\n')
 
-        file_nl.write(f'\n## Rijschema {team_id}\n\n')
+        file_nl.write(f'\n# Rijschema {team_id}\n\n')
         file_nl.write(f'Basis locatie: {base_location}\n\n')
         file_nl.write(f'Warming Up Tijd: {timebefore}\n\n')
-        file_nl.write(f'Kosten per km: €{TRAVEL_COST_PER_KM}\n\n')
+        file_nl.write(f'Kosten per km: €{travel_cost_per_km}\n\n')
         file_nl.write(get_events_header('nl'))
         file_nl.write('| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')
         for calendar_event in calendar_events:
             calendar_event[1] = weekday_translation[calendar_event[1]]
             file_nl.write('| ' + ' | '.join(calendar_event) + ' |\n')
-
