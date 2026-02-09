@@ -10,12 +10,6 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import (Paragraph, SimpleDocTemplate, Spacer, Table,
                                 TableStyle)
-from dotenv import load_dotenv
-
-load_dotenv()
-
-sportlink_token_list = os.getenv('SPORTLINK_TOKEN_LIST').split(',')
-
 # Input en output paths
 script_dir = os.path.dirname(os.path.abspath(__file__))
 markdown_folder = os.path.join(script_dir, "docs", "Handbal")
