@@ -41,3 +41,23 @@ jobs:
         name: driving-schedules-${{ github.run_number }}
         path: docs/Handbal/*.pdf
         retention-days: 90
+
+    - name: Send email with PDF attachments
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        secure: true
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: Driving Schedule - ${{ github.run_number }}
+        to: ${{ secrets.EMAIL_TO }}
+        from: ${{ secrets.EMAIL_FROM }}
+        body: |
+          Nieuw rijschema gegenereerd!
+          
+          Zie de bijgevoegde PDF bestanden.
+          
+          Workflow run: ${{ github.run_number }}
+          Datum: ${{ github.event.repository.updated_at }}
+        attachments: docs/Handbal/*.pdf
