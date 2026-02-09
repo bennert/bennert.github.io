@@ -50,9 +50,9 @@ jobs:
         secure: true
         username: ${{ secrets.EMAIL_USERNAME }}
         password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: ${{ secrets.EMAIL_SUBJECT }} ${{ github.event.repository.updated_at }}
-        to: ${{ secrets.EMAIL_TO }}
-        from: ${{ secrets.EMAIL_FROM }}
+        subject: ${{ vars.EMAIL_SUBJECT }} ${{ github.event.repository.updated_at }}
+        to: ${{ vars.EMAIL_TO }}
+        from: ${{ vars.EMAIL_FROM }}
         body: |
           New driving schedule generated!
           
