@@ -50,14 +50,14 @@ jobs:
         secure: true
         username: ${{ secrets.EMAIL_USERNAME }}
         password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: Driving Schedule - ${{ github.run_number }}
+        subject: ${{ secrets.EMAIL_SUBJECT }} ${{ github.event.repository.updated_at }}
         to: ${{ secrets.EMAIL_TO }}
         from: ${{ secrets.EMAIL_FROM }}
         body: |
-          Nieuw rijschema gegenereerd!
+          New driving schedule generated!
           
-          Zie de bijgevoegde PDF bestanden.
+          See the attached PDF files.
           
           Workflow run: ${{ github.run_number }}
-          Datum: ${{ github.event.repository.updated_at }}
+          Date: ${{ github.event.repository.updated_at }}
         attachments: docs/Handbal/*.pdf
