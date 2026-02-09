@@ -1,5 +1,5 @@
 """ Maak rijschema voor team op basis van sportlink kalender en google maps afstand en tijd """
-from datetime import timedelta
+from datetime import datetime, timedelta
 import os
 import requests
 import icalendar
@@ -72,11 +72,6 @@ def get_events_header(language):
 
 assert os.getenv('MAPS_API_KEY'), 'MAPS_API_KEY not set'
 assert os.getenv('SPORTLINK_TOKEN_LIST'), 'SPORTLINK_TOKEN_LIST not set'
-FILE_PATH_NL = 'docs/Handbal/index.md'
-FILE_PATH_EN = 'docs/Handbal/index.en.md'
-# Ensure the directories exist
-os.makedirs(os.path.dirname(FILE_PATH_NL), exist_ok=True)
-os.makedirs(os.path.dirname(FILE_PATH_EN), exist_ok=True)
 
 # Sportlink
 sportlink_token_list = os.getenv('SPORTLINK_TOKEN_LIST').split(',')
@@ -98,21 +93,29 @@ weekday_translation = {
     'Sunday': 'Zondag'
 }
 
-with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
-     open(FILE_PATH_EN, 'w', encoding='utf-8') as file_en:
-    for sportlink_token_item in sportlink_token_list:
-        team_id = sportlink_token_item.split(':')[0]
-        base_location = sportlink_token_item.split(':')[1]
-        sportlink_token = sportlink_token_item.split(':')[2]
-        warming_up_time = float(sportlink_token_item.split(':')[3])
-        travel_cost_per_km = float(sportlink_token_item.split(':')[4])
-        print(f'\nProcessing {team_id} @ base: {base_location}')
-        # Presence time before game
-        timebefore = timedelta(minutes=warming_up_time)
-        calendar = get_sportlink_calendar()
-        calendar_events = get_events_from_calendar()
-        # Sort events on date
-        calendar_events.sort(key=lambda x: x[0])
+for sportlink_token_item in sportlink_token_list:
+    team_id = sportlink_token_item.split(':')[0]
+    base_location = sportlink_token_item.split(':')[1]
+    sportlink_token = sportlink_token_item.split(':')[2]
+    warming_up_time = float(sportlink_token_item.split(':')[3])
+    travel_cost_per_km = float(sportlink_token_item.split(':')[4])
+    print(f'\nProcessing {team_id} @ base: {base_location}')
+    # Presence time before game
+    timebefore = timedelta(minutes=warming_up_time)
+    calendar = get_sportlink_calendar()
+    calendar_events = get_events_from_calendar()
+    # Sort events on date
+    calendar_events.sort(key=lambda x: x[0])
+
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    FILE_PATH_NL = f'docs/Handbal/Rijschema_{team_id}_{today}.md'
+    FILE_PATH_EN = f'docs/Handbal/Drivingschedule_{team_id}_{today}.md'
+    # Ensure the directories exist
+    os.makedirs(os.path.dirname(FILE_PATH_NL), exist_ok=True)
+    os.makedirs(os.path.dirname(FILE_PATH_EN), exist_ok=True)
+    with open(FILE_PATH_NL, 'w', encoding='utf-8') as file_nl, \
+        open(FILE_PATH_EN, 'w', encoding='utf-8') as file_en:
 
         file_en.write(f'\n# Driving schedule {team_id}\n\n')
         file_en.write(f'Base location: {base_location}\n\n')
