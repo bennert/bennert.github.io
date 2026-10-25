@@ -1,6 +1,6 @@
 # Bennert
 
-![Brand](assets/images/PersonalBrandBennert-nl.jpg)
+![Bennert de Wijs, Senior Test Automation Engineer and high-tech specialist](assets/images/PersonalBrandBennert.png)
 
 [Who is Bennert](Intro/index.en.md)
 
