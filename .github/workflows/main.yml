@@ -31,14 +31,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - name: Create Driving Schedule
-        env:
-          SPORTLINK_TOKEN_LIST: ${{ secrets.SPORTLINK_TOKEN_LIST }}
-          MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
-        run: |
-          python3 -m pip install --upgrade pip
-          pip install -r requirements.txt
-          python3 create_driving_schedule.py
       - name: Set cache_id
         run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
       - uses: actions/cache@v4
