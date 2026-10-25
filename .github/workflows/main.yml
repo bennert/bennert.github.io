@@ -39,6 +39,26 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
+      - name: Update copyright year
+        run: |
+          python3 - <<'PY'
+          from datetime import datetime, timezone
+          from pathlib import Path
+          import re
+
+          config_path = Path("mkdocs.yml")
+          config = config_path.read_text(encoding="utf-8")
+          pattern = r"(?m)^(\s*&copy;\s*)\d{4}"
+          updated_config, replacements = re.subn(
+              pattern,
+              lambda match: f"{match.group(1)}{datetime.now(timezone.utc).year}",
+              config,
+              count=1,
+          )
+          if replacements != 1:
+              raise SystemExit("Could not find the copyright year in mkdocs.yml")
+          config_path.write_text(updated_config, encoding="utf-8")
+          PY
       - name: Build mkdocs website
         run:  |
           python3 -m pip install --upgrade pip
