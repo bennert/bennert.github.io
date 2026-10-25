@@ -4,6 +4,9 @@ site_dir: _site
 
 theme:
   name: material
+  favicon: assets/images/favicon.ico
+  # icon:
+  #   alternate: assets/images/alternate.png
   features:
     - content.code.annotation
     - content.code.copy
@@ -42,11 +45,13 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid_custom
+          # format: !!python/name:mermaid2.fence_mermaid_custom
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins:
   - search
   - mermaid2
+  - info
   - open-in-new-tab
   - i18n:
       languages:
@@ -55,7 +60,8 @@ plugins:
       default_language: nl
 
 extra_javascript:
-    - https://unpkg.com/mermaid/dist/mermaid.min.js
+    - https://unpkg.com/mermaid/dist/mermaid.js
+    # - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 nav:
 - Thuis: index.md
@@ -93,4 +99,4 @@ extra:
       link: https://www.linkedin.com/in/bennert-de-wijs-5938aa2/
 
 copyright: |
-  &copy; 2023 <a href="https://www.bennert.nl/" target="_blank" rel="noopener">Bennert</a>
+  &copy; 2024 <a href="https://www.bennert.nl/" target="_blank" rel="noopener">Bennert</a>
