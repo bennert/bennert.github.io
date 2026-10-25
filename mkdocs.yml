@@ -51,7 +51,6 @@ markdown_extensions:
 plugins:
   - search
   - mermaid2
-  - info
   - open-in-new-tab
   - i18n:
       languages:
