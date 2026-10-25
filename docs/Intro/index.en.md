@@ -2,20 +2,24 @@
 
 ![Profiel foto](../assets/images/Bennert_profiel.JPG)
 
-My name is Bennert de Wijs and I was born and raised in Veldhoven.
+I am Bennert de Wijs, a Senior Test Automation Engineer and high-tech specialist from Veldhoven. My work often starts with a question: how does this system really fit together, and how could it work smarter?
 
-I have a MAVO diploma, followed by an MTS Electronics and an HTS Computer Science diploma.
+With a background in electronics (MTS) and computer science (HTS), I enjoy moving between physical technology and abstract software. That intersection is where I make sense of complex systems, connect the dots, and make processes clearer and easier to manage.
 
-I worked as a Field Service Engineer from 1996 to 2000, as a Software Engineer from 2000 to 2007 and then as a Software Test Engineer and Test Automation Engineer.
+## Turning complexity into clarity
 
-My hobbies are Home Automation, handball and paragliding.
+From medical imaging and DICOM to high-tech development environments, complex technology calls for more than running tests. I look at how components, data, teams, and processes fit together. Where are the risks? What feedback do developers need? And how can we make quality part of the work from the start?
 
-From the age of 6 to the age of 26 I joined [scouting](https://www.scouting.nl/), first as a member and later as a leader and leader of the scouts (children aged 10 to 14).
+## Smart automation creates room
 
-I enjoy improving processes, both as a scoutmaster, at home and in my work, and it gives me a lot of energy.
+I started out building software as a Software Engineer; today, as a Test Automation Engineer, I help teams deliver faster and with greater confidence. I set up the continuous integration process for the [Philips Hue](https://www.philips-hue.com/) project using [Jenkins](https://www.jenkins.io/). I later applied that experience with the UroNav team, adding test automation and automated test reporting, and at Uplanner to improve continuous integration and continuous delivery.
 
-One of my favorite work assignments was the [Philips hue](https://www.philips-hue.com/) project, where I set up the entire continuous integration process with [Jenkins](https://www.jenkins .io/). I later used this knowledge to improve the continuous integration process at [UroNav](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjb97X7hLKCAxVmwAIHHfQIAHgQFnoECBAQAQ&url= https%3A%2F%2Fwww.philips.nl%2Fhealthcare%2Fproduct%2FHC784026%2Furonav-mrultrasound-guided-fusion-biopsy-system&usg=AOvVaw3ua3E6O4wgtpJS0Md6G9cI&opi=89978449) team, including adding test automation and automatic test reporting, and beyond in the Uplanner project to improve the continuous integration and continuous delivery process.
+Automation is not an end in itself. Well-designed frameworks, reliable feedback, and a thoughtful CI/CD pipeline remove unnecessary manual work and uncertainty. That brings calm to the development process and gives people room for creative problem-solving. So I think beyond the tests themselves, contributing to the architecture, structure, and improvements that make the whole process simpler.
 
-I have strong abstraction skills and can derive concepts from concrete situations. I am innovative and constantly think about innovations based on my creativity. I am good at coming up with new, varied and creative ideas. I have a great learning capacity and can quickly master something new and learn from experience. I am environmentally sensitive and open to others and the environment.
+## A thread of curiosity
 
-When it comes to work, I am always looking for new challenges where I can use and further develop my talents.
+My curiosity extends beyond work. With home automation, I explore how technology can make everyday life smarter; paragliding lets me experience how people, equipment, and conditions form a single system. I bring that same curiosity to software testing and framework design: understand how something works, see what could be possible, and turn ideas into something genuinely useful.
+
+I learn quickly, enjoy looking beyond the usual approach, and thrive on meaningful improvement. I am looking for projects where I can untangle complex challenges and work with a team to build systems and processes that are simpler, more reliable, and better to work with.
+
+Handball and scouting have also been important parts of my life. From age six to twenty-six, I was involved with [Scouting Netherlands](https://www.scouting.nl/), first as a member and later as a leader and scoutmaster. Helping people grow and finding better ways to work together energized me there, too.
