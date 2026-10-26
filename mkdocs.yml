@@ -5,8 +5,8 @@ site_dir: _site
 theme:
   name: material
   favicon: assets/images/favicon.ico
-  # icon:
-  #   alternate: assets/images/alternate.png
+  icon:
+    logo: fontawesome/brands/bitcoin
   features:
     - content.code.annotation
     - content.code.copy
